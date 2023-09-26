@@ -32,8 +32,10 @@ public:
     int MyStrLen();// возвращает длину строки
     void MyStrCat(myString& b); // объединение строк
     void MyDelChr(char c); // удаляет указанный символ
-    int MyStrCmp(myString &b); // сравнение строк 
-    static void createdObjects();
+    int MyStrCmp(myString &b); // сравнение строк
+    char* getString() const; //геттер
+    static void createdObjects(); //подсчёт количества созданных обьектов
+    myString(const myString&); // конструктор копирования
 
     ~myString();
 

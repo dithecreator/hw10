@@ -35,4 +35,12 @@ int main() {
     int result = my2.MyStrCmp(my4); // результат работы mystrcmp
     cout << result << endl;
     my.createdObjects();
+    
+    myString my5("seg");
+    const char* myvalue = my5.getString();
+    
+    myString my6("srg");
+    myString my7 = my6;
+    cout << "copy constructor: ";
+    my7.print();
 }

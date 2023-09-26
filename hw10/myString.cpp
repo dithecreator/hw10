@@ -119,7 +119,9 @@ void myString:: MyDelChr(char c){
     cout << str << endl;
 }
 
-
+ char* myString:: getString() const {
+      return str;
+  }
 
 int myString:: MyStrCmp(myString &b){
     int size1 = strlen(str);
@@ -138,6 +140,14 @@ int myString:: MyStrCmp(myString &b){
 }
  void myString:: createdObjects(){
     cout << "количество созданных обьектов: " << counter << endl;
+}
+
+
+myString::myString(const myString& newStr)
+{
+    length = newStr.length;
+    str = new char[strlen(newStr.str) + 1];
+    strcpy(str, newStr.str);
 }
 
 myString :: ~myString(){
